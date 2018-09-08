@@ -1,0 +1,18 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="send_packets_switch"
+        android:summary="@string/pref_description_send_packets"
+        android:title="@string/pref_title_send_packets" />
+
+    <ListPreference
+        android:defaultValue="250"
+        android:entries="@array/pref_list_drive_percent"
+        android:entryValues="@array/pref_list_drive_percent_values"
+        android:key="drive_speed"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_drive_speed" />
+
+</PreferenceScreen>

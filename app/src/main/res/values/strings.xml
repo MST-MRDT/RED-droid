@@ -3,4 +3,25 @@
     <string name="reverse">Reverse</string>
     <string name="stop">Stop</string>
     <string name="forward">Forward</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <string name="pref_title_send_packets">Send Rover Packets</string>
+    <string name="pref_description_send_packets">When enabled, this app becomes a rover
+        controller</string>
+
+    <string name="pref_title_drive_speed">Drive Speed</string>
+    <string-array name="pref_list_drive_percent">
+        <item>75 Percent</item>
+        <item>50 Percent</item>
+        <item>25 Percent</item>
+    </string-array>
+    <string-array name="pref_list_drive_percent_values">
+        <item>750</item>
+        <item>500</item>
+        <item>250</item>
+    </string-array>
+
 </resources>
