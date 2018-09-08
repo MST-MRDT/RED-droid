@@ -207,7 +207,7 @@ public class RoveComm {
         byte[] contents;
         String ip;
 
-        public SendData(int id, byte[] contents, String ip) {
+        SendData(int id, byte[] contents, String ip) {
             this.id = id;
             this.contents = contents;
             this.ip = ip;

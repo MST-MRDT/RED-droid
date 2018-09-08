@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class RoveProtocol {
 
     // Version number of this packet implementation
-    public static final byte VERSION_NUMBER = 1;
+    private static final byte VERSION_NUMBER = 1;
 
     private RoveProtocol() {
     }
@@ -48,7 +48,7 @@ public class RoveProtocol {
      * Static method to decode recieved packet from rovecomm
      * @param rawData Packet data[] including header
      * @return DataObject containing dataID, sequence number, acknowledgement status, and data[]
-     * @throws Exception
+     * @throws Exception only when it's a version not defined
      */
     public static DataObject decodePacket(byte[] rawData) throws Exception {
 
@@ -106,7 +106,7 @@ public class RoveProtocol {
         private int seqNum;
         private boolean requiresAck;
 
-        public DataObject(byte[] data, int dataId, int seqNum, boolean requiresAck) {
+        DataObject(byte[] data, int dataId, int seqNum, boolean requiresAck) {
             this.data = data;
             this.dataId = dataId;
             this.seqNum = seqNum;

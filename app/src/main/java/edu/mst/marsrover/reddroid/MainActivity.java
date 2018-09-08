@@ -40,13 +40,12 @@ public class MainActivity extends AppCompatActivity implements RoveComm.OnReceiv
             public void onClick(View view) {
                 stopDrive();
                 Button button = (Button) view;
-                if(button.getText().equals("Reverse")) {
-                    button.setText("Forward");
-                    forwardLeft = true;
+                if(button.getText().equals(getString(R.string.reverse))) {
+                    button.setText(R.string.forward);
                 } else {
-                    button.setText("Reverse");
-                    forwardLeft = false;
+                    button.setText(R.string.reverse);
                 }
+                forwardLeft = !forwardLeft;
             }
         });
 
@@ -55,13 +54,12 @@ public class MainActivity extends AppCompatActivity implements RoveComm.OnReceiv
             public void onClick(View view) {
                 stopDrive();
                 Button button = (Button) view;
-                if(button.getText().equals("Reverse")) {
-                    button.setText("Forward");
-                    forwardRight = true;
+                if(button.getText().equals(getString(R.string.reverse))) {
+                    button.setText(R.string.forward);
                 } else {
-                    button.setText("Reverse");
-                    forwardRight = false;
+                    button.setText(R.string.reverse);
                 }
+                forwardRight = !forwardRight;
             }
         });
 
@@ -90,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements RoveComm.OnReceiv
         if(!forwardRight) right *= -1;
 
         sendNewDrivePower(left, right);
-        Log.e("ROVECOMM", "Sending: " + left + ", " + right);
+        Log.e("RoveComm", "Sending: " + left + ", " + right);
     }
 
     @Override
